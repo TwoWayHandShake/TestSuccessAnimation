@@ -11,6 +11,15 @@
 		8023E135292392D300453644 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023E134292392D300453644 /* ContentView.swift */; };
 		8023E137292392D400453644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8023E136292392D400453644 /* Assets.xcassets */; };
 		8023E13A292392D400453644 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8023E139292392D400453644 /* Preview Assets.xcassets */; };
+		8023E1422923A6EC00453644 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 8023E1412923A6EC00453644 /* Lottie */; };
+		8023E1452923A76500453644 /* quadrados.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E1442923A76500453644 /* quadrados.json */; };
+		8023E1472923A7DC00453644 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023E1462923A7DC00453644 /* LottieView.swift */; };
+		8023E1492923B73E00453644 /* green-check.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E1482923B73E00453644 /* green-check.json */; };
+		8023E14B2923B7C100453644 /* orangeCheck.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14A2923B7C100453644 /* orangeCheck.json */; };
+		8023E14D2923B91F00453644 /* spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14C2923B91F00453644 /* spinner.json */; };
+		8023E14F2923B9AB00453644 /* spinner2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14E2923B9AB00453644 /* spinner2.json */; };
+		8023E1532923BA9E00453644 /* check3.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E1522923BA9E00453644 /* check3.json */; };
+		8023E1552923C40300453644 /* CoreHap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023E1542923C40300453644 /* CoreHap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +28,15 @@
 		8023E134292392D300453644 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8023E136292392D400453644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8023E139292392D400453644 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8023E1442923A76500453644 /* quadrados.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quadrados.json; sourceTree = "<group>"; };
+		8023E1462923A7DC00453644 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		8023E1482923B73E00453644 /* green-check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "green-check.json"; sourceTree = "<group>"; };
+		8023E14A2923B7C100453644 /* orangeCheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orangeCheck.json; sourceTree = "<group>"; };
+		8023E14C2923B91F00453644 /* spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spinner.json; sourceTree = "<group>"; };
+		8023E14E2923B9AB00453644 /* spinner2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spinner2.json; sourceTree = "<group>"; };
+		8023E1522923BA9E00453644 /* check3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check3.json; sourceTree = "<group>"; };
+		8023E1542923C40300453644 /* CoreHap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHap.swift; sourceTree = "<group>"; };
+		8023E1562923D75F00453644 /* hero_simple-celebration-02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hero_simple-celebration-02.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8023E1422923A6EC00453644 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +71,12 @@
 			isa = PBXGroup;
 			children = (
 				8023E132292392D300453644 /* TestSuccessAnimationApp.swift */,
+				8023E1542923C40300453644 /* CoreHap.swift */,
+				8023E1462923A7DC00453644 /* LottieView.swift */,
+				8023E1562923D75F00453644 /* hero_simple-celebration-02.caf */,
 				8023E134292392D300453644 /* ContentView.swift */,
 				8023E136292392D400453644 /* Assets.xcassets */,
+				8023E1432923A70600453644 /* Lottie */,
 				8023E138292392D400453644 /* Preview Content */,
 			);
 			path = TestSuccessAnimation;
@@ -65,6 +88,19 @@
 				8023E139292392D400453644 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8023E1432923A70600453644 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				8023E1482923B73E00453644 /* green-check.json */,
+				8023E14C2923B91F00453644 /* spinner.json */,
+				8023E14E2923B9AB00453644 /* spinner2.json */,
+				8023E1522923BA9E00453644 /* check3.json */,
+				8023E14A2923B7C100453644 /* orangeCheck.json */,
+				8023E1442923A76500453644 /* quadrados.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +119,9 @@
 			dependencies = (
 			);
 			name = TestSuccessAnimation;
+			packageProductDependencies = (
+				8023E1412923A6EC00453644 /* Lottie */,
+			);
 			productName = TestSuccessAnimation;
 			productReference = 8023E12F292392D300453644 /* TestSuccessAnimation.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 8023E126292392D300453644;
+			packageReferences = (
+				8023E1402923A6EC00453644 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 8023E130292392D300453644 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,7 +167,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8023E1532923BA9E00453644 /* check3.json in Resources */,
 				8023E13A292392D400453644 /* Preview Assets.xcassets in Resources */,
+				8023E1452923A76500453644 /* quadrados.json in Resources */,
+				8023E14B2923B7C100453644 /* orangeCheck.json in Resources */,
+				8023E14D2923B91F00453644 /* spinner.json in Resources */,
+				8023E1492923B73E00453644 /* green-check.json in Resources */,
+				8023E14F2923B9AB00453644 /* spinner2.json in Resources */,
 				8023E137292392D400453644 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +187,8 @@
 			files = (
 				8023E135292392D300453644 /* ContentView.swift in Sources */,
 				8023E133292392D300453644 /* TestSuccessAnimationApp.swift in Sources */,
+				8023E1552923C40300453644 /* CoreHap.swift in Sources */,
+				8023E1472923A7DC00453644 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +389,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8023E1402923A6EC00453644 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8023E1412923A6EC00453644 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8023E1402923A6EC00453644 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8023E127292392D300453644 /* Project object */;
 }

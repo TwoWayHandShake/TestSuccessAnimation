@@ -19,8 +19,12 @@ struct ContentView: View {
         Button("Show Sheet") {
           showingSheet.toggle()
         }.foregroundColor(.white)
-          .sheet(isPresented: $showingSheet) {
-            SheetView()
+          .sheet(isPresented: $showingSheet)
+          {
+            SheetView().presentationDetents([.fraction(0.85)])
+              
+             
+              
           }
         
       }
@@ -31,74 +35,115 @@ struct ContentView: View {
 
 
 struct SheetView: View {
+
   @Environment(\.dismiss) var dismiss
   let gradient = Gradient(colors: [Color("c1"), Color("c2"), Color("c3")])
   var colors = [Color("c1"), Color("c2"), Color("c3")]
+  var text = "Wird weitergeleitet"
+  private var hapticManager = HapticManager()
   
+  @State var scale = 0.75
+
   
+  init() {
+    hapticManager?.playSlice()
+
+  }
+  
+
   var body: some View {
     
-    // Top Bar
-    HStack {
+   
+    
+    VStack{
+      // Top Bar
+      HStack {
+        Spacer()
+        Button {
+          dismiss()
+        } label: {
+          Image(systemName: "xmark.circle.fill")
+        }
+        .font(.title2)
+        .foregroundColor(Color(hex: 0xDFDFE4))
+        .padding()
+        .background(.white)
+      }
+      
+      // Background Card + Name Cards
+      ZStack {
+        Rectangle()
+          .fill(
+            LinearGradient(colors: colors, startPoint: .topLeading , endPoint: .bottomTrailing))
+        
+        VStack (spacing: 5) {
+          HStack (spacing: 20) {
+            Card(initials: "FF", name: "Frank Felsing")
+              .scaleEffect(scale)
+              .onAppear {
+//                let baseAnimation = Animation.easeInOut(duration: 0.3)
+                let baseAnimation = Animation.spring()
+                withAnimation(baseAnimation){
+                  scale = 1
+                }
+              }
+              
+            
+            
+            Card(initials: "BS", name: "Beate Simons")
+              .scaleEffect(scale)
+              .onAppear {
+                //                let baseAnimation = Animation.easeInOut(duration: 0.3)
+                let baseAnimation = Animation.spring()
+                withAnimation(baseAnimation){
+                  scale = 1
+                }
+              }
+          }
+          
+          ZStack {
+            Rectangle().frame(width: 60, height: 60)
+              .foregroundColor(.white.opacity(0.5))
+              .cornerRadius(16)
+            LottieView(name: "check3", loopMode: .playOnce)
+              .frame(width: 90 , height: 90)
+          }
+          
+        }
+        
+      }
+      .frame(height: 280)
+      .cornerRadius(16)
+      .padding()
+      
+      Text(text).foregroundColor(.gray)
+      
       Spacer()
+      
       Button {
         dismiss()
       } label: {
-        Image(systemName: "xmark.circle.fill")
+        Text("Schließen")
+        
       }
-      .font(.title2)
-      .foregroundColor(Color(hex: 0xDFDFE4))
+      .font(.body)
+      .fontWeight(.semibold)
+      .tracking(0.5)
+      .textCase(.uppercase)
+      .foregroundColor(.white)
       .padding()
-      .background(.white)
+      // Just standard size
+      .frame(width: 350)
+      .background(.orange)
+      .cornerRadius(60)
+      
+    }
+    .background(.white)
+   
+  
     }
     
     
-    ZStack {
-      Rectangle()
-        .fill(
-          LinearGradient(colors: colors, startPoint: .topLeading , endPoint: .bottomTrailing))
-      
-      VStack {
-        HStack (spacing: 20) {
-          Card(initials: "FF", name: "Frank Felsing")
-          Card(initials: "BS", name: "Beate Simons")
-        }
-        Rectangle().frame(width: 50, height: 50)
-          .foregroundColor(.white.opacity(0.5))
-          .cornerRadius(15)
-          
-      }
-      
-      
-    }
-    .frame(height: 300)
-    .cornerRadius(15)
-    .padding()
-    
-    Text("Wird an Beate Simons weitergeleitet").foregroundColor(.gray)
-    
-    Spacer()
-    
-    
-    
-    Button {
-      dismiss()
-    } label: {
-      Text("Schließen")
-      
-    }
-    .font(.body)
-    .fontWeight(.semibold)
-    .tracking(0.5)
-    .textCase(.uppercase)
-    .foregroundColor(.white)
-    .padding()
-    // Just standard size
-    .frame(width: 350)
-    .background(.orange)
-    .cornerRadius(60)
-    
-  }
 }
 
 extension Color {
@@ -113,6 +158,7 @@ extension Color {
 struct Card: View {
   var initials: String = "fas"
   var name: String = "dfasd"
+ 
   
   var body: some View{
     ZStack {
@@ -120,15 +166,19 @@ struct Card: View {
       
       VStack {
         ZStack {
-          Circle().frame(width: 60, height: 60)
+          Circle().frame(width: 64, height: 64)
+            .foregroundColor(Color("AvatarColor"))
           Text(initials).foregroundColor(.white)
+            .font(.title2)
+            .fontWeight(.bold)
         }
         Text(name)
+          .font(.callout)
+          .foregroundColor(Color("AvatarColor"))
       }
-      .padding(.vertical, 25.0)
-      .padding(.horizontal, 15.0)
+      .frame(width: 140, height: 140)
       .background(.white)
-      .cornerRadius(15)
+      .cornerRadius(16)
       
       
     }
