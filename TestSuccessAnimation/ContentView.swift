@@ -72,7 +72,7 @@ struct SheetView: View {
       
       
       // Background Card + Name Cards
-      VStack (spacing: -30){
+      VStack (spacing: -40){
         VStack {
           ZStack {
             Rectangle()
@@ -80,7 +80,7 @@ struct SheetView: View {
                 LinearGradient(colors: colors, startPoint: .topLeading , endPoint: .bottomTrailing))
             
             VStack (spacing: 5) {
-              HStack (spacing: 20) {
+              HStack (spacing: 30) {
                 Card(initials: "FF", name: "Frank Felsing")
                   .padding(.top, 0.0)
                   .scaleEffect(scale)
@@ -107,7 +107,7 @@ struct SheetView: View {
 
             }
           }
-          .frame(height: 280)
+          .frame(height: 250)
           .cornerRadius(40)
         .padding()
         }

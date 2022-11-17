@@ -27,14 +27,19 @@ class HapticManager {
   
   private func setupResources() {
     do {
-      if let path = Bundle.main.url(forResource: "Slice", withExtension: "caf") {
+      if let path = Bundle.main.url(forResource: "hero", withExtension: "wav") {
         sliceAudio = try hapticEngine.registerAudioResource(path)
+        print("found audio")
+        
       }
     } catch {
       print("Failed to load audio: \(error)")
     }
+    
+    
+    
   }
-
+  
   
   func playSlice() {
     do {
@@ -88,19 +93,18 @@ extension HapticManager {
       relativeTime: 1.75,
       duration: 0.05)
     
-  
-    
     var events = [rumble1, rumble2, rumble3]
     
-    // 1
     if let audioResourceID = sliceAudio {
-      // 2
       let audio = CHHapticEvent(
         audioResourceID: audioResourceID,
         parameters: [],
         relativeTime: 0.5)
       events.append(audio)
     }
+    
+
+  
     
     // 3
     return try CHHapticPattern(events: events, parameters: [])
