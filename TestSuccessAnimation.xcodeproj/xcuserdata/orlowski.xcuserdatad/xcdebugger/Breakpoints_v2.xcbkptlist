@@ -14,10 +14,10 @@
             filePath = "TestSuccessAnimation/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
-            landmarkName = "ContentView_Previews"
-            landmarkType = "14">
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "previews"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -170,20 +170,28 @@ struct Card: View {
 
       
       VStack {
-        ZStack {
-          Circle().frame(width: 64, height: 64)
+        VStack(){
+          ZStack {
+            Circle().frame(width: 64, height: 64)
+              .foregroundColor(Color("AvatarColor"))
+            Text(initials).foregroundColor(.white)
+              .font(.title2)
+              .fontWeight(.bold)
+          }
+          
+          Text(name)
+            .font(.callout)
             .foregroundColor(Color("AvatarColor"))
-          Text(initials).foregroundColor(.white)
-            .font(.title2)
-            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
         }
-        Text(name)
-          .font(.callout)
-          .foregroundColor(Color("AvatarColor"))
+        Spacer()
+        
       }
-      .frame(width: 150, height: 170)
+      .frame(width: 140, height: 130)
+      .padding(.top, 24.0)
       .background(.white)
       .cornerRadius(32)
+      
       
       
     }

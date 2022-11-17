@@ -18,9 +18,10 @@
 		8023E14B2923B7C100453644 /* orangeCheck.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14A2923B7C100453644 /* orangeCheck.json */; };
 		8023E14D2923B91F00453644 /* spinner.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14C2923B91F00453644 /* spinner.json */; };
 		8023E14F2923B9AB00453644 /* spinner2.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E14E2923B9AB00453644 /* spinner2.json */; };
-		8023E1532923BA9E00453644 /* check3.json in Resources */ = {isa = PBXBuildFile; fileRef = 8023E1522923BA9E00453644 /* check3.json */; };
 		8023E1552923C40300453644 /* CoreHap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8023E1542923C40300453644 /* CoreHap.swift */; };
 		80D477D12926415E0043AA7C /* hero.wav in Resources */ = {isa = PBXBuildFile; fileRef = 80D477D02926415E0043AA7C /* hero.wav */; };
+		80D477D3292648230043AA7C /* check5.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D477D2292648230043AA7C /* check5.json */; };
+		80D477D5292649AD0043AA7C /* check3.json in Resources */ = {isa = PBXBuildFile; fileRef = 80D477D4292649AD0043AA7C /* check3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,10 +36,11 @@
 		8023E14A2923B7C100453644 /* orangeCheck.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = orangeCheck.json; sourceTree = "<group>"; };
 		8023E14C2923B91F00453644 /* spinner.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spinner.json; sourceTree = "<group>"; };
 		8023E14E2923B9AB00453644 /* spinner2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spinner2.json; sourceTree = "<group>"; };
-		8023E1522923BA9E00453644 /* check3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check3.json; sourceTree = "<group>"; };
 		8023E1542923C40300453644 /* CoreHap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreHap.swift; sourceTree = "<group>"; };
 		8023E1562923D75F00453644 /* hero_simple-celebration-02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hero_simple-celebration-02.caf"; sourceTree = "<group>"; };
 		80D477D02926415E0043AA7C /* hero.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hero.wav; sourceTree = "<group>"; };
+		80D477D2292648230043AA7C /* check5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check5.json; sourceTree = "<group>"; };
+		80D477D4292649AD0043AA7C /* check3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check3.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +101,8 @@
 				8023E1482923B73E00453644 /* green-check.json */,
 				8023E14C2923B91F00453644 /* spinner.json */,
 				8023E14E2923B9AB00453644 /* spinner2.json */,
-				8023E1522923BA9E00453644 /* check3.json */,
+				80D477D4292649AD0043AA7C /* check3.json */,
+				80D477D2292648230043AA7C /* check5.json */,
 				8023E14A2923B7C100453644 /* orangeCheck.json */,
 				8023E1442923A76500453644 /* quadrados.json */,
 			);
@@ -170,10 +173,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8023E1532923BA9E00453644 /* check3.json in Resources */,
+				80D477D5292649AD0043AA7C /* check3.json in Resources */,
 				8023E13A292392D400453644 /* Preview Assets.xcassets in Resources */,
 				8023E1452923A76500453644 /* quadrados.json in Resources */,
 				8023E14B2923B7C100453644 /* orangeCheck.json in Resources */,
+				80D477D3292648230043AA7C /* check5.json in Resources */,
 				8023E14D2923B91F00453644 /* spinner.json in Resources */,
 				8023E1492923B73E00453644 /* green-check.json in Resources */,
 				80D477D12926415E0043AA7C /* hero.wav in Resources */,

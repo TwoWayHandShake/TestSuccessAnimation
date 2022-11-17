@@ -29,8 +29,6 @@ class HapticManager {
     do {
       if let path = Bundle.main.url(forResource: "hero", withExtension: "wav") {
         sliceAudio = try hapticEngine.registerAudioResource(path)
-        print("found audio")
-        
       }
     } catch {
       print("Failed to load audio: \(error)")
@@ -102,10 +100,7 @@ extension HapticManager {
         relativeTime: 0.5)
       events.append(audio)
     }
-    
 
-  
-    
     // 3
     return try CHHapticPattern(events: events, parameters: [])
     
