@@ -70,53 +70,58 @@ struct SheetView: View {
         .background(.white)
       }
       
+      
       // Background Card + Name Cards
-      ZStack {
-        Rectangle()
-          .fill(
-            LinearGradient(colors: colors, startPoint: .topLeading , endPoint: .bottomTrailing))
-        
-        VStack (spacing: 5) {
-          HStack (spacing: 20) {
-            Card(initials: "FF", name: "Frank Felsing")
-              .scaleEffect(scale)
-              .onAppear {
-//                let baseAnimation = Animation.easeInOut(duration: 0.3)
-                let baseAnimation = Animation.spring()
-                withAnimation(baseAnimation){
-                  scale = 1
-                }
-              }
-              
-            
-            
-            Card(initials: "BS", name: "Beate Simons")
-              .scaleEffect(scale)
-              .onAppear {
-                //                let baseAnimation = Animation.easeInOut(duration: 0.3)
-                let baseAnimation = Animation.spring()
-                withAnimation(baseAnimation){
-                  scale = 1
-                }
-              }
-          }
-          
+      VStack (spacing: -30){
+        VStack {
           ZStack {
-            Rectangle().frame(width: 60, height: 60)
-              .foregroundColor(.white.opacity(0.5))
-              .cornerRadius(16)
-            LottieView(name: "check3", loopMode: .playOnce)
-              .frame(width: 90 , height: 90)
+            Rectangle()
+              .fill(
+                LinearGradient(colors: colors, startPoint: .topLeading , endPoint: .bottomTrailing))
+            
+            VStack (spacing: 5) {
+              HStack (spacing: 20) {
+                Card(initials: "FF", name: "Frank Felsing")
+                  .padding(.top, 0.0)
+                  .scaleEffect(scale)
+                  .onAppear {
+    //                let baseAnimation = Animation.easeInOut(duration: 0.3)
+                    let baseAnimation = Animation.spring()
+                    withAnimation(baseAnimation){
+                      scale = 1
+                    }
+                    
+                  }
+                  
+                
+                Card(initials: "BS", name: "Beate Simons")
+                  .scaleEffect(scale)
+                  .onAppear {
+                    //                let baseAnimation = Animation.easeInOut(duration: 0.3)
+                    let baseAnimation = Animation.spring()
+                    withAnimation(baseAnimation){
+                      scale = 1
+                    }
+                  }
+              }
+
+            }
           }
-          
+          .frame(height: 280)
+          .cornerRadius(40)
+        .padding()
+        }
+        VStack (spacing: -40){
+          LottieView(name: "check3", loopMode: .playOnce)
+            .frame(width: 150 , height: 150)
+          Text(text).foregroundColor(.gray)
         }
         
       }
-      .frame(height: 280)
-      .cornerRadius(16)
-      .padding()
       
-      Text(text).foregroundColor(.gray)
+      
+      
+     
       
       Spacer()
       
@@ -176,9 +181,9 @@ struct Card: View {
           .font(.callout)
           .foregroundColor(Color("AvatarColor"))
       }
-      .frame(width: 140, height: 140)
+      .frame(width: 150, height: 170)
       .background(.white)
-      .cornerRadius(16)
+      .cornerRadius(32)
       
       
     }
